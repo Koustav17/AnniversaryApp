@@ -1,1 +1,232 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --bg: #fff7f9;
+    --card: #ffffff;
+    --accent: #ff6b81;
+    --muted: #6b6b6b;
+    --shadow: 0 8px 30px rgba(101, 39, 70, 0.08);
+    --max-width: 980px;
+    --radius: 16px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background: radial-gradient(1200px 600px at 10% 10%, rgba(255, 107, 129, 0.06), transparent), var(--bg);
+    color: #222;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.wrap {
+    width: 100%;
+    max-width: var(--max-width);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.95));
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: var(--shadow);
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 20px;
+    align-items: start;
+}
+
+@media (max-width:900px) {
+    .wrap {
+        grid-template-columns: 1fr;
+        padding: 20px
+    }
+}
+
+@media screen and (max-width: 767px) {
+  .photo{
+        height: 211px !important;
+  }
+
+  .title {
+    display: block !important;
+  }
+}
+
+.hero {
+    padding: 18px 20px;
+}
+
+.title {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.heart {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    background: linear-gradient(135deg, var(--accent), #ff8aa3);
+    color: white;
+    box-shadow: 0 6px 18px rgba(255, 107, 129, 0.18);
+}
+
+h1 {
+    font-size: 34px;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.4px
+}
+
+p.lead {
+    margin: 0 0 18px 0;
+    color: var(--muted)
+}
+
+.card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 18px;
+    box-shadow: 0 6px 18px rgba(16, 16, 16, 0.04);
+}
+
+.photo {
+    width: 100%;
+    height: 320px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: block;
+    background: #f3e9ef;
+    object-fit: cover;
+    box-shadow: 0 8px 30px rgba(200, 120, 140, 0.06);
+}
+
+.meta {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-top: 14px
+}
+
+.names {
+    font-weight: 600
+}
+
+.date {
+    color: var(--muted);
+    font-size: 14px
+}
+
+.message {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 1.6
+}
+
+/* Right column */
+.side {
+    padding: 18px;
+    position: relative;
+    min-height: 300px;
+}
+
+.qrWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center
+}
+
+.qrImg {
+    width: 200px;
+    height: 200;
+    border-radius: 12px;
+    background: white;
+    padding: 12px;
+    box-shadow: 0 8px 30px rgba(16, 16, 16, 0.06)
+}
+
+.qrLabel {
+    font-size: 14px;
+    color: var(--muted)
+}
+
+.controls {
+    margin-top: 18px;
+    display: flex;
+    gap: 8px;
+    flex-direction: column
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #eee
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer
+}
+
+.link {
+    font-size: 14px;
+    color: var(--accent);
+    text-decoration: none
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--muted);
+    text-align: center
+}
+
+/* small decorative */
+.ribbon {
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    background: linear-gradient(135deg, #fff7f9, #ffdfe6);
+    border-radius: 12px;
+    padding: 6px 10px;
+    font-weight: 600;
+    box-shadow: 0 8px 30px rgba(255, 107, 129, 0.06)
+}
+
+.mobile-icon {
+  display: inline-block;
+  width: 30px;
+  height: 50px;
+  border: 2px solid #333;       /* phone outline */
+  border-radius: 6px;           /* rounded corners */
+  position: relative;
+  background: #f9f9f9;          /* phone body color */
+}
+
+/* Screen area */
+.mobile-icon::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 4px;
+  right: 4px;
+  bottom: 10px;
+  background: #000;             /* screen color */
+  border-radius: 4px;
+}
+
